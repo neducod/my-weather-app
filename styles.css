@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+*{
+    font-family: "Montserrat", serif;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+.container{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 425px;
+    flex-grow: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-section{
+    display: flex;
+    padding: 25px;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-section .input-wrapper{
+    height: 54px;
+    width: 100%;
+    position: relative;
+}
+
+.search-section .input-wrapper span{
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+.search-section .search-input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    text-transform: uppercase;
+    padding: 0 20px 0 50px;
+    border: 1px solid rgb(128, 0, 128);
+    transition: 0.1 ease;
+}
+.search-section .search-input:focus{
+    border-color: #5f41e4;
+}
+.search-section .search-input::placeholder{
+    text-transform: none;
+}
+.search-section .location-button{
+    height: 54px;
+    width: 54px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid rgb(221, 160, 221);
+    background: #fff;
+    cursor: pointer;
+    color: rgb(216, 147, 216);
+    transition: 0.3 ease;
+}
+
+.search-section .location-button:hover{
+    background-color: rgb(216, 147, 216);
+    color: #fff;
+    border-color: #5f41e4;
+}
+.search-section .location-button span{
+    font-size: 1.3rem;
+}
+.weather-section .current-weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 50px;
+}
+.current-weather .weather-icon{
+    width: 140px;
+    align-items: 1
+}
+.current-weather .temperature{
+    font-size: 3.38rem;
+    margin: 23px 0;
+    display: flex;
+}
+.current-weather .temperature span{
+    font-size: 1.56rem;
+    font-weight: 500;
+    margin: 5px 0 0 2px;
+}
+.current-weather .description{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.hourly-weather{
+    padding: 16px 25px;
+    border-top: 1px solid #d5ccff;
+}
+.hourly-weather .weather-list{
+    display: flex;
+    list-style: none;
+    gap: 43px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    margin-bottom: -16px;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+.hourly-weather:hover .weather-list {
+    scrollbar-color: #bfbfbf transparent;
+}
+.hourly-weather .weather-list{
+    display: flex;
+    flex-direction: row; 
+    gap: 7px;
+    font-weight: 500;
+    align-items: center;
+}
+.hourly-weather .weather-item .weather-icon{
+    width: 28px;
+    aspect-ratio: 1;
+}
+@media (max-width: 624px) {
+    body{
+        padding: 15px;
+    }
+    .search-section{
+        padding: 20px;
+    }
+    .hourly-weather{
+        padding: 16px 20px;
+    }
+    .hourly-weather .weather-list{
+        gap: 32px;
+    }
+}
